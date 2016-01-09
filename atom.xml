@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-08T15:15:31.000Z</updated>
+  <updated>2016-01-09T13:05:45.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,17 +15,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Kotlin开发Android（一）环境搭建]]></title>
-    <link href="http://yoursite.com/2016/01/08/Kotlin%E5%BC%80%E5%8F%91Android%EF%BC%88%E4%B8%80%EF%BC%89%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yoursite.com/2016/01/08/Kotlin开发Android（一）环境搭建/</id>
-    <published>2016-01-08T15:14:09.000Z</published>
-    <updated>2016-01-08T15:15:31.000Z</updated>
-    <content type="html"><![CDATA[<p>###Kotlin 环境搭建</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">getView</span><span class="params">()</span>&#123;</span></span><br><span class="line">    toast(<span class="string">"Hello World"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title><![CDATA[Kotlin开发Android（一）配置]]></title>
+    <link href="http://yoursite.com/2016/01/09/Kotlin%E5%BC%80%E5%8F%91Android%EF%BC%88%E4%B8%80%EF%BC%89%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2016/01/09/Kotlin开发Android（一）配置/</id>
+    <published>2016-01-09T13:04:24.000Z</published>
+    <updated>2016-01-09T13:05:45.000Z</updated>
+    <content type="html"><![CDATA[<p>### </p>
+<p>​    本系列记录用kotlin开发一个小app的过程，并在其中讲解一些kotlin的语法和Kotlin开发Android的优势。有关kotlin的优点和缺点不再赘述。</p>
+<p>​    文档传送门：</p>
+<p>​    kotlin参考文档:<a href="https://kotlinlang.org/docs/reference/" target="_blank" rel="external">https://kotlinlang.org/docs/reference/</a></p>
+<p>​    kotlin中文站：<a href="http://kotlinlang.cn/" target="_blank" rel="external">http://kotlinlang.cn/</a></p>
+<p>​    kotlin for android: <a href="http://pan.baidu.com/s/1hrxSBf2" target="_blank" rel="external">http://pan.baidu.com/s/1hrxSBf2</a>(该文档比较老了，新版的要花钱～木有钱买～)</p>
+<p>​    想参与翻译又不想自己建站的来这里：<a href="https://github.com/cctanfujun/kotlin-web-site-cn" target="_blank" rel="external">https://github.com/cctanfujun/kotlin-web-site-cn</a></p>
+<h3 id="u65B0_u5EFA_u5DE5_u7A0B"><a href="#u65B0_u5EFA_u5DE5_u7A0B" class="headerlink" title="新建工程"></a>新建工程</h3><p>​    我写的是一个关于囚徒健身的辅助app，所以工程名为MuscleFriend的普通Android工程。报名随便起我的叫com.nuttysoft.musclefriend。</p>
+<h3 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>​    妈蛋，又是环境搭建！说环境搭建就是扯犊子而已，就是在As上装两个插件的事，而且现在的最新版本的As是自带buff出场的，本身就已经集成了kotlin和Kotlin Extensions For Android,只需要配置gradle文件就可以了。</p>
+<p>​    <strong>但是</strong>, kotlin 和 Kotlin Extensions For Android插件也是有用处的。装完插件后，在As的Code菜单中灰多出来Convert Java File To Kotlin选项，用这个就可以吧普通的java文件转为kotlin文件了，神器～在Tools菜单中也会出现kotlin配置相关的选项。</p>
+<p>​    综上，装不装插件你看着办，装插件如下：</p>
+<p>​    Setting－&gt;Plugin-&gt;Install JetBrains plugin-&gt;搜索kotlin－&gt;选中kotlin在右侧待你install安装－&gt;选中Kotlin Extensions For Android安装－&gt;重启，就成功了。</p>
+<p>由于网络原因安装失败也不要担心，不耽误咱写代码。</p>
+<h3 id="u914D_u7F6Egradle"><a href="#u914D_u7F6Egradle" class="headerlink" title="配置gradle"></a>配置gradle</h3><p>​    <strong>第一种方法</strong>：</p>
+<p>​    在包下新建activities包，并在该包下新建普通的java文件，使用Code－&gt;Convert Java File To Kotlin将java文件转为kotlin文件。选中Tools－&gt;kotlin-&gt;configure kotlin in project 在出现的对话框中选择All modules Contains Kotlin files 。Kotlin插件版本选择最新。</p>
+<p>​    这个时候我们的module的build.gradle文件会变成这样</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">compile fileTree(<span class="string">dir:</span> <span class="string">'libs'</span>, <span class="string">include:</span> [<span class="string">'*.jar'</span>])</span><br><span class="line">testCompile <span class="string">'junit:junit:4.12'</span></span><br><span class="line">compile <span class="string">"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">buildscript &#123;</span><br><span class="line">ext.kotlin_version = <span class="string">'1.0.0-beta-3595'</span></span><br><span class="line">repositories &#123;</span><br><span class="line">mavenCentral()</span><br><span class="line">&#125;</span><br><span class="line">dependencies &#123;</span><br><span class="line">classpath <span class="string">"org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>需要注意的是我的<code>ext.kotlin_version = &#39;1.0.0-beta-3595&#39;</code>使用的是beta3，所以使用beta4的不要奇怪。</p>
+<p>​    到此就可以用kotlin开发Android了，但是Kotlin 提供给我们的Android Extensions插件不用的话你都对不住自己。该插件给我门提供了一种新的方式去获取组件，通过倒入<code>import kotlinx.android.synthetic.your_layout.*</code>就可以直接使用这个your_layout布局中的id进行操作了，再也不用去findViewById了，也不用ButterKinife去依赖注入了。使用Android Extensions需要在gralde中dependencies添加<code>classpath &quot;org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version&quot;</code></p>
+<p>​    这样就可以更好的去玩耍了。</p>
+<p>​    <strong>第二种方法</strong></p>
+<p>​    把上面的gradle粘进grade.build中……</p>
+<p>​    综上所述，用kotlin开发andoid压根就是0配置…….</p>
+<p>​    接下来我这个喜欢健身但是不喜欢动的人q^q开始正式做这个app，并讲一些kotlin的语法。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>###Kotlin 环境搭建</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">]]>
+    <![CDATA[<p>### </p>
+<p>​    本系列记录用kotlin开发一个小app的过程，并在其中讲解一些kotlin的语法和Kotlin开发Android的优势。有关kotlin的优点和缺点不再赘述。</p>
+<p>​    文档传送门：</p>
+<p>​    kotlin参考]]>
     </summary>
     
   </entry>
