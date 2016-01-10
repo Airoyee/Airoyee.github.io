@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-09T13:05:45.000Z</updated>
+  <updated>2016-01-10T06:09:03.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,11 +15,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[React Native分步init项目排查init慢的问题]]></title>
+    <link href="http://yoursite.com/2016/01/10/React-Native%E5%88%86%E6%AD%A5init%E9%A1%B9%E7%9B%AE%E6%8E%92%E6%9F%A5init%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2016/01/10/React-Native分步init项目排查init慢的问题/</id>
+    <published>2016-01-10T06:02:22.000Z</published>
+    <updated>2016-01-10T06:09:03.000Z</updated>
+    <content type="html"><![CDATA[<p>​    不知道哪里出现了问题，react-native init 老是不行，重要的是分步骤init项目确实可以的，实在不知道哪里出现了问题。现在把分步init的过程记录下来，以备忘。</p>
+<p><strong>第一步</strong>(创建工程目录)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir AwesomeProject&#10;cd AwesomeProject</span><br></pre></td></tr></table></figure>
+<p><strong>第二步</strong>(创建package..json)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+<p><strong>第三部</strong>(安装node_modules)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install react-native --save</span><br></pre></td></tr></table></figure>
+<p><strong>第四步</strong>(初始化项目)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -e &#34;require(&#39;react-native/local-cli/cli&#39;).init(&#39;.&#39;,&#39;AwesomeProject&#39;)&#34;</span><br></pre></td></tr></table></figure>
+<p>​    完成上面四步，就会生成和react-native init一样结构的了，所以，可以把别的项目的node_modules和json文件粘贴过来，然后初始化项目。现在在Xcode中打开项目运行就会出现久违的，Welcome To React Native了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>​    不知道哪里出现了问题，react-native init 老是不行，重要的是分步骤init项目确实可以的，实在不知道哪里出现了问题。现在把分步init的过程记录下来，以备忘。</p>
+<p><strong>第一步</strong>(创建工程目录)</p>
+<fig]]>
+    </summary>
+    
+      <category term="React Native" scheme="http://yoursite.com/tags/React-Native/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Kotlin开发Android（一）配置]]></title>
     <link href="http://yoursite.com/2016/01/09/Kotlin%E5%BC%80%E5%8F%91Android%EF%BC%88%E4%B8%80%EF%BC%89%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2016/01/09/Kotlin开发Android（一）配置/</id>
     <published>2016-01-09T13:04:24.000Z</published>
-    <updated>2016-01-09T13:05:45.000Z</updated>
+    <updated>2016-01-10T06:09:22.000Z</updated>
     <content type="html"><![CDATA[<p>### </p>
 <p>​    本系列记录用kotlin开发一个小app的过程，并在其中讲解一些kotlin的语法和Kotlin开发Android的优势。有关kotlin的优点和缺点不再赘述。</p>
 <p>​    文档传送门：</p>
@@ -51,6 +78,8 @@
 <p>​    文档传送门：</p>
 <p>​    kotlin参考]]>
     </summary>
+    
+      <category term="Kotlin" scheme="http://yoursite.com/tags/Kotlin/"/>
     
   </entry>
   
