@@ -4,23 +4,29 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Test | nuttysoft</title>
+  <title>Android变色状态栏 | nuttysoft</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sdfds">
+  <meta name="description" content="以前的时候把平时搜集的资料都放在了印象笔记和为知笔记里面，为了治疗懒癌，有必要把笔记的东西翻出来了。造福自己，帮助他人。
+  今天介绍一个android的开源库用来实现变色状态栏。有关于沉浸式和透明状态栏的区别，请自行搜索。
+  补上该库的传送门：https://github.com/jgilfelt/SystemBarTint">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Test">
-<meta property="og:url" content="http://www.nuttysoft.com/2016/01/11/Test/index.html">
+<meta property="og:title" content="Android变色状态栏">
+<meta property="og:url" content="http://www.nuttysoft.com/2016/01/16/Android变色状态栏/index.html">
 <meta property="og:site_name" content="nuttysoft">
-<meta property="og:description" content="sdfds">
-<meta property="og:updated_time" content="2016-01-11T14:23:05.000Z">
+<meta property="og:description" content="以前的时候把平时搜集的资料都放在了印象笔记和为知笔记里面，为了治疗懒癌，有必要把笔记的东西翻出来了。造福自己，帮助他人。
+  今天介绍一个android的开源库用来实现变色状态栏。有关于沉浸式和透明状态栏的区别，请自行搜索。
+  补上该库的传送门：https://github.com/jgilfelt/SystemBarTint">
+<meta property="og:updated_time" content="2016-01-16T13:58:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Test">
-<meta name="twitter:description" content="sdfds">
+<meta name="twitter:title" content="Android变色状态栏">
+<meta name="twitter:description" content="以前的时候把平时搜集的资料都放在了印象笔记和为知笔记里面，为了治疗懒癌，有必要把笔记的东西翻出来了。造福自己，帮助他人。
+  今天介绍一个android的开源库用来实现变色状态栏。有关于沉浸式和透明状态栏的区别，请自行搜索。
+  补上该库的传送门：https://github.com/jgilfelt/SystemBarTint">
   
     <link rel="alternative" href="/atom.xml" title="nuttysoft" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/face.jpeg">
   
   <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
@@ -110,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Kotlin/" style="font-size: 10px;">Kotlin</a> <a href="/tags/React-Native/" style="font-size: 10px;">React-Native</a>
+						<a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Kotlin/" style="font-size: 10px;">Kotlin</a> <a href="/tags/React-Native/" style="font-size: 10px;">React-Native</a>
 					</div>
 				</section>
 				
@@ -176,11 +182,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Test" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Android变色状态栏" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/11/Test/" class="article-date">
-  	<time datetime="2016-01-11T14:22:29.000Z" itemprop="datePublished">2016-01-11</time>
+      <a href="/2016/01/16/Android变色状态栏/" class="article-date">
+  	<time datetime="2016-01-16T13:28:05.000Z" itemprop="datePublished">2016-01-16</time>
 </a>
     </div>
   
@@ -193,7 +199,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Test
+      Android变色状态栏
     </h1>
   
 
@@ -201,6 +207,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -209,7 +219,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>sdfds</p>
+        <p>  以前的时候把平时搜集的资料都放在了印象笔记和为知笔记里面，为了治疗懒癌，有必要把笔记的东西翻出来了。造福自己，帮助他人。</p>
+<p>  今天介绍一个android的开源库用来实现变色状态栏。有关于沉浸式和透明状态栏的区别，请自行搜索。</p>
+<p>  补上该库的传送门：<a href="https://github.com/jgilfelt/SystemBarTint" target="_blank" rel="external">https://github.com/jgilfelt/SystemBarTint</a></p>
+<a id="more"></a>
+<h3 id="u6DFB_u52A0_u4F9D_u8D56"><a href="#u6DFB_u52A0_u4F9D_u8D56" class="headerlink" title="添加依赖"></a>添加依赖</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    compile <span class="string">'com.readystatesoftware.systembartint:systembartint:1.0.3'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u521B_u5EFA_u62D3_u5C55_u51FD_u6570"><a href="#u521B_u5EFA_u62D3_u5C55_u51FD_u6570" class="headerlink" title="创建拓展函数"></a>创建拓展函数</h3><p>  因为kotlin支持拓展函数，所以用拓展函数实现。java版本自行脑补。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">fun Activity.changeStatusBar(res: Int)&#123;</span><br><span class="line">	<span class="comment">//不小于4.4版本设置透明状态栏</span></span><br><span class="line">    <span class="keyword">if</span>(Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.KITKAT)&#123;</span><br><span class="line">        var win: Window = <span class="keyword">this</span>.window</span><br><span class="line">        var winParams: WindowManager.LayoutParams = win.attributes</span><br><span class="line">        val bits : Int = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS</span><br><span class="line">        winParams.flags = bits</span><br><span class="line">        win.attributes = winParams</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//获取管理器</span></span><br><span class="line">    var tinManager: SystemBarTintManager = SystemBarTintManager(<span class="keyword">this</span>)</span><br><span class="line">    <span class="comment">//允许状态栏变色</span></span><br><span class="line">    tinManager.isStatusBarTintEnabled = <span class="keyword">true</span></span><br><span class="line">    <span class="comment">//设置颜色</span></span><br><span class="line">    tinManager.setStatusBarTintResource(res)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样Activity就有一个叫做chageStatusBar的方法了，建议将这个拓展方法放在特定的拓展类下面，就像我门给帮助方法建一个帮助类一样。当然，你也可以把他放在你乐意放的地方。</p>
+<h3 id="u7ED9_u5E03_u5C40_u6587_u4EF6_u6DFB_u52A0_u5C5E_u6027"><a href="#u7ED9_u5E03_u5C40_u6587_u4EF6_u6DFB_u52A0_u5C5E_u6027" class="headerlink" title="给布局文件添加属性"></a>给布局文件添加属性</h3><p>将下面的内容添加套布局根节点中，这样，你的布局就不会顶到“天上”去了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:clipToPadding="true"</span><br><span class="line">android:fitsSystemWindows="true"</span><br></pre></td></tr></table></figure>
+<p>完成上面的步骤，你的状态栏就变成了你指定的颜色了。java版本的也不难写出来。</p>
 
       
     </div>
@@ -256,7 +276,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Test" data-title="Test" data-url="http://www.nuttysoft.com/2016/01/11/Test/"></div>
+	<div class="ds-thread" data-thread-key="Android变色状态栏" data-title="Android变色状态栏" data-url="http://www.nuttysoft.com/2016/01/16/Android变色状态栏/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
